@@ -12,11 +12,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(api)
+    axios.get(api+'users')
     .then((response) => {
-      this.setState({ users: response.data.users })
-      console.log(response.data)
-      console.log(`${this.state.users}`)
+      this.setState({ users: response.data })
     })
   }
 
