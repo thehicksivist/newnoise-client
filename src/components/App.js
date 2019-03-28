@@ -4,22 +4,10 @@ import Home from './Home'
 import NavBar from './Navbar'
 import Projects from './Projects'
 import Blog from './Blog/Blog'
-import axios from 'axios'
-
-const api = 'http://localhost:3001/'
+import Users from './Users'
+import Posts from './Posts'
 
 class App extends React.Component {
-
-    state = {
-        users: []
-    }
-    
-    componentDidMount() {
-        axios.get(api+'users')
-        .then((response) => {
-            this.setState({ users: response.data })
-        })
-    }
 
     render() {
         return (
@@ -31,9 +19,10 @@ class App extends React.Component {
                         <Route exact path="/" component={Home} />
                         <Route exact path="/projects" component={Projects} />
                         <Route exact path="/blog" component={Blog} />
+                        <Route exact path="/posts" component={Posts} />
+                        <Route exact path="/users" component={Users} />
 					<div>
                         FOOTER
-                        { this.state.users.map((user) => <p>{ user.name }: {user.email}</p>) }
 					</div>
 				</div>
             </Router>

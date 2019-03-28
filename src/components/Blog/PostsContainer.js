@@ -14,16 +14,13 @@ class PostsContainer extends React.Component {
         this.addNewPost = this.addNewPost.bind(this)
     }
 
-    handleFormSubmit(title, image, description){
-        let body = JSON.stringify({post: {title: title, image: image, description: description} })
+    handleFormSubmit(title, image, text){
+        let body = JSON.stringify({post: {title: title, image: image, text: text} })
 
-        fetch('http://localhost:3001/posts', {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: body,
-        }).then((response) => {return response.json()})
+        axios.post('http://localhost:3001/posts', {
+            body: body
+          })
+            .then((response) => {return response.json()})
             .then((post)=>{
                 this.addNewPost(post)
         })

@@ -23,6 +23,16 @@ class Navbar extends Component {
 									BLOG
 								</NavLink>
 							</li>
+							<li>
+								<NavLink to="/users">
+									USERS
+								</NavLink>
+							</li>
+							<li>
+								<NavLink to="/posts">
+									POSTS
+								</NavLink>
+							</li>
 						</ul>
 					</div>
 				</div>
