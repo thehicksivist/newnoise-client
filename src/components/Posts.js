@@ -9,7 +9,7 @@ class Posts extends React.Component {
     super(props);
     this.state = {
       posts: [],
-      newPost: {title: '', image: '', text: ''}
+      newPost: {}
     }
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -31,29 +31,19 @@ class Posts extends React.Component {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        console.log(`${name} = ${value}`)
-        this.setState({newPost})
-       
-        // below is a guide
-        // var someProperty = {...this.state.someProperty}
-        // someProperty.flag = true;
-        // this.setState({someProperty})
+      
+        this.setState({
+          newPost: {...this.state.newPost, [name]: value }
+        })
       }
 
       createNewPost = (event) => {
         event.preventDefault()
-        console.log(this.state.newPost.title)
-        console.log(this.state.newPost.image)
-        console.log(this.state.newPost.text)
 
-        let title = this.state.newPost.title
-        let image = this.state.newPost.image
-        let text = this.state.newPost.text
-
-        axios.post(api, { post: {title: title, image: image, text: text} })
+        axios.post(api, { post: {...this.state.newPost} })
         .then((response) => {
           const posts = [...this.state.posts, response.data]
-          this.setState({ posts, newPost: '' })
+          this.setState({ posts, newPost: {} })
         })
       }
 
@@ -62,10 +52,13 @@ class Posts extends React.Component {
               <div>
                 <div>
                 <form onSubmit={this.createNewPost}>
-                <label>New Post:</label>
-                <input name="title" value={ this.state.newPost.title } onChange={ this.handleInputChange } />
-                <input name="image" value={ this.state.newPost.image } onChange={ this.handleInputChange } />
-                <input name="text" value={ this.state.newPost.text } onChange={ this.handleInputChange } />
+                <label>New Post:</label><br/>
+                Title:
+                <input name="title" value={ this.state.newPost.title } onChange={ this.handleInputChange } /><br/>
+                Image Url:
+                <input name="image" value={ this.state.newPost.image } onChange={ this.handleInputChange } /><br/>
+                Text:
+                <input name="text" value={ this.state.newPost.text } onChange={ this.handleInputChange } /><br/>
                 <button>Submit</button>
                 </form>
                 </div>
