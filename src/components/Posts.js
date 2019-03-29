@@ -40,7 +40,7 @@ class Posts extends React.Component {
       createNewPost = (event) => {
         event.preventDefault()
 
-        axios.post(api, { post: {...this.state.newPost} })
+        axios.post(api, {...this.state.newPost})
         .then((response) => {
           const posts = [...this.state.posts, response.data]
           this.setState({ posts, newPost: {} })
