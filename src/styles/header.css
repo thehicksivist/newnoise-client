@@ -1,0 +1,20 @@
+
+.imgcont {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.face {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* filter: invert(1) */
+}
+.logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    width: 50%;
+    filter: invert(1)
+}
