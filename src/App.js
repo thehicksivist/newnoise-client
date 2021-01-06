@@ -11,6 +11,7 @@ import Header from './components/Header';
 import Burger from './components/Menu/Burger';
 import Menu from './components/Menu/Menu';
 import { useOnClickOutside } from './hooks';
+import './styles/global.css';
 
 const App = () => {
     const [open, setOpen] = useState(false);
@@ -21,14 +22,14 @@ const App = () => {
     return (
         <Router>
             <div className='App'>
-                <div ref={node}>
+                <div ref={node} className='hideburger'>
                     <Burger open={open} setOpen={setOpen} />
                     <Menu open={open} setOpen={setOpen} />
                 </div>
                 <div>
                     <Header />
                 </div>
-                <div>
+                <div className='hidebar'>
                     <NavBar />
                 </div>
                 <Route exact path='/' component={Home} />
