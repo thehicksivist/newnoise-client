@@ -8,12 +8,14 @@ import Users from './components/Users';
 import Posts from './components/Posts';
 import Portfolio from './components/Portfolio/Portfolio';
 import Header from './components/Header';
+import Burger from './components/Menu/Burger';
 
 class App extends React.Component {
     render() {
         return (
             <Router>
                 <div className='App'>
+                    <Burger />
                     <div>
                         <Header />
                     </div>

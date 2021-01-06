@@ -6,7 +6,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav>
-                <div>
+                <div className='bar'>
                     <ul className='flex-container'>
                         <li className='flex-item'>
                             <NavLink to='/'>HOME</NavLink>
