@@ -7,25 +7,23 @@ class Navbar extends Component {
         return (
             <nav>
                 <div>
-                    <div>
-                        <ul className='flex-container'>
-                            <li className='flex-item'>
-                                <NavLink to='/'>HOME</NavLink>
-                            </li>
-                            <li className='flex-item'>
-                                <NavLink to='/blog'>BLOG</NavLink>
-                            </li>
-                            <li className='flex-item'>
-                                <NavLink to='/users'>MUSIC</NavLink>
-                            </li>
-                            <li className='flex-item'>
-                                <NavLink to='/users'>MINIATURES</NavLink>
-                            </li>
-                            <li className='flex-item'>
-                                <NavLink to='/portfolio'>DEV PORTFOLIO</NavLink>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul className='flex-container'>
+                        <li className='flex-item'>
+                            <NavLink to='/'>HOME</NavLink>
+                        </li>
+                        <li className='flex-item'>
+                            <NavLink to='/blog'>BLOG</NavLink>
+                        </li>
+                        <li className='flex-item'>
+                            <NavLink to='/users'>MUSIC</NavLink>
+                        </li>
+                        <li className='flex-item'>
+                            <NavLink to='/users'>MINIATURES</NavLink>
+                        </li>
+                        <li className='flex-item'>
+                            <NavLink to='/portfolio'>DEV PORTFOLIO</NavLink>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         );

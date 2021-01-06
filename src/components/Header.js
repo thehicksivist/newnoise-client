@@ -8,8 +8,15 @@ class Header extends Component {
     render() {
         return (
             <div className='imgcont'>
-                <img className='face' src={headerimg} />
-                <img className='logo' src={logo} />
+                <div className='shadow'></div>
+                <img className='face fade-in' src={headerimg} />
+                <div className='text'>
+                    <div className='title'>
+                        <p className='titletext'> undoing perfectionism </p>
+                    </div>
+                    <p className='subtitle'>by James Hicks</p>
+                </div>
+                {/* <img className='logo' src={logo} /> */}
             </div>
         );
     }
