@@ -17,7 +17,7 @@ function Home() {
                     style={{
                         color: `black`,
                         backgroundColor: `black`,
-                        height: 5,
+                        height: 2,
                     }}
                 />
             </div>

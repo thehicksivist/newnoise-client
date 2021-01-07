@@ -1,27 +1,42 @@
 import React from 'react';
 import { StyledMenu } from './Menu.styled';
+import { NavLink } from 'react-router-dom';
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
     return (
         <StyledMenu open={open}>
-            <a href='/'>
-                <span role='img' aria-label='about us'>
-                    &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
-                </span>
-                About us
-            </a>
-            <a href='/'>
-                <span role='img' aria-label='price'>
-                    &#x1f4b8;
-                </span>
-                Pricing
-            </a>
-            <a href='/'>
-                <span role='img' aria-label='contact'>
-                    &#x1f4e9;
-                </span>
-                Contact
-            </a>
+            <ul>
+                <li>
+                    <NavLink to='/' onClick={() => setOpen(!open)}>
+                        HOME
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/about' onClick={() => setOpen(!open)}>
+                        ABOUT
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/music' onClick={() => setOpen(!open)}>
+                        MUSIC
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/miniatures' onClick={() => setOpen(!open)}>
+                        MINIATURES
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/portfolio' onClick={() => setOpen(!open)}>
+                        PORTFOLIO
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to='/' onClick={() => setOpen(!open)}>
+                        CONTACT
+                    </NavLink>
+                </li>
+            </ul>
         </StyledMenu>
     );
 };

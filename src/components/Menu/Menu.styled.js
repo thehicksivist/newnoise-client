@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledMenu = styled.nav`
+export const StyledMenu = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@ export const StyledMenu = styled.nav`
         width: 100%;
     }
 
-    a {
+    li {
         font-size: 2rem;
         text-transform: uppercase;
         padding: 2rem 0;
