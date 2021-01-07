@@ -12,7 +12,7 @@ class Header extends Component {
                 <img className='face fade-in' src={headerimg} />
                 <div className='text'>
                     <div className='title'>
-                        <p className='titletext'> undoing perfectionism </p>
+                        <p className='titletext'> undoing perfectionism</p>
                     </div>
                     <p className='subtitle'>by James Hicks</p>
                 </div>
