@@ -1,15 +1,23 @@
+.bar {
+    padding-top: 30px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
-  
+}
 
-  .flex-container {
+.flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: flex-start;
     align-items: center;
-    }
+}
+
+.flex-item {
+    flex: 0 1 auto;
+    align-self: auto;
+}
