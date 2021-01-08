@@ -1,6 +1,7 @@
 import React from 'react';
 import FadeInSection from './FadeInSection';
 import Line from '../components/BitsNbobs/Line';
+import Gallery from './Gallery';
 
 const Miniatures = () => {
     // create a simple modal to view the images up close
@@ -16,9 +17,9 @@ const Miniatures = () => {
                 </p>
             </FadeInSection>
             <Line />
-            <FadeInSection>
-                <p>THIS IS WHERE THE GALLERY WILL GO YA'LL</p>
-            </FadeInSection>
+            <div className='gallery-container'>
+                <Gallery />
+            </div>
         </div>
     );
 };
