@@ -4,18 +4,21 @@ export const StyledMenu = styled.ul`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: ${({ theme }) => theme.primaryLight};
+    background: white;
+    opacity: 0.85;
     height: 100vh;
     text-align: left;
     padding: 2rem;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 3;
     transition: transform 0.3s ease-in-out;
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
 
-    @media (max-width: ${({ theme }) => theme.mobile}) {
+    @media (max-width: 900px) {
         width: 100%;
+        height: 100%;
     }
 
     li {

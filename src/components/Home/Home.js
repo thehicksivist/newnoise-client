@@ -1,26 +1,29 @@
 import React from 'react';
+import FadeInSection from '../FadeInSection';
 import Contact from './Contact';
+import Line from '../BitsNbobs/Line';
 
 function Home() {
     return (
         <div className='container'>
-            <div className='item'>
+            <FadeInSection className='item'>
                 <p className='font3'>
                     Undoing Perfectionism by James Hicks is a collection of
                     projects focused on self-improvement, namely a podcast,
                     youtube channel and instagram account which can be previewed
                     and accessed below. For more info visit the About Page.
                 </p>
-            </div>
-            <div className='item'>
-                <hr
-                    style={{
-                        color: `black`,
-                        backgroundColor: `black`,
-                        height: 2,
-                    }}
+            </FadeInSection>
+            <Line />
+            <FadeInSection>
+                <iframe
+                    width='100%'
+                    scrolling='no'
+                    frameborder='no'
+                    src='https://anchor.fm/james-hicks0/embed'
                 />
-            </div>
+            </FadeInSection>
+            <Line />
             <div className='h2 item'>Here's what I've been up to...</div>
             {/* <div>POWR</div>
             <div
@@ -37,7 +40,14 @@ function Home() {
                     Powered by Curator.io
                 </a>
             </div>
-            <Contact />
+            <Line />
+
+            <div className='item'>
+                <Contact />
+            </div>
+            <Line />
+
+            <div className='item'>SOCIAL MEDIA LINKS</div>
         </div>
     );
 }
