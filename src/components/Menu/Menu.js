@@ -27,12 +27,7 @@ const Menu = ({ open, setOpen }) => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/portfolio' onClick={() => setOpen(!open)}>
-                        PORTFOLIO
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/' onClick={() => setOpen(!open)}>
+                    <NavLink to='/contact' onClick={() => setOpen(!open)}>
                         CONTACT
                     </NavLink>
                 </li>

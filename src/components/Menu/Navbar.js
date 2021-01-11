@@ -19,9 +19,6 @@ const Navbar = () => {
                     <NavLink to='/miniatures'>MINIATURES</NavLink>
                 </li>
                 <li className='flex-item'>
-                    <NavLink to='/portfolio'>PORTFOLIO</NavLink>
-                </li>
-                <li className='flex-item'>
                     <NavLink to='/'>CONTACT</NavLink>
                 </li>
             </ul>

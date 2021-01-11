@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
+import img1 from '../img/Miniatures/img1.jpg';
+import img2 from '../img/Miniatures/img2.jpg';
+import img3 from '../img/Miniatures/img3.jpg';
+import img4 from '../img/Miniatures/img4.jpg';
+import img5 from '../img/Miniatures/img5.jpg';
+import img6 from '../img/Miniatures/img6.jpg';
+import img7 from '../img/Miniatures/img7.jpg';
+import img8 from '../img/Miniatures/img8.jpg';
 
 const Gallery = () => {
     const [thisState, setThisState] = useState({
@@ -146,16 +154,36 @@ const Gallery = () => {
     };
     const images = [
         {
-            original: 'https://picsum.photos/id/1018/1000/600/',
-            thumbnail: 'https://picsum.photos/id/1018/250/150/',
+            original: img1,
+            thumbnail: img1,
         },
         {
-            original: 'https://picsum.photos/id/1015/1000/600/',
-            thumbnail: 'https://picsum.photos/id/1015/250/150/',
+            original: img2,
+            thumbnail: img2,
         },
         {
-            original: 'https://picsum.photos/id/1019/1000/600/',
-            thumbnail: 'https://picsum.photos/id/1019/250/150/',
+            original: img3,
+            thumbnail: img3,
+        },
+        {
+            original: img4,
+            thumbnail: img4,
+        },
+        {
+            original: img5,
+            thumbnail: img5,
+        },
+        {
+            original: img6,
+            thumbnail: img6,
+        },
+        {
+            original: img7,
+            thumbnail: img7,
+        },
+        {
+            original: img8,
+            thumbnail: img8,
         },
     ];
 

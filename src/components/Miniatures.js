@@ -17,9 +17,9 @@ const Miniatures = () => {
                 </p>
             </FadeInSection>
             <Line />
-            <div className='gallery-container'>
+            <FadeInSection>
                 <Gallery />
-            </div>
+            </FadeInSection>
         </div>
     );
 };

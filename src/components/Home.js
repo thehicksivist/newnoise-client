@@ -1,7 +1,6 @@
 import React from 'react';
-import FadeInSection from '../FadeInSection';
-import Contact from './Contact';
-import Line from '../BitsNbobs/Line';
+import FadeInSection from './FadeInSection';
+import Line from './BitsNbobs/Line';
 
 function Home() {
     return (
@@ -40,14 +39,6 @@ function Home() {
                     Powered by Curator.io
                 </a>
             </div>
-            <Line />
-
-            <div className='item'>
-                <Contact />
-            </div>
-            <Line />
-
-            <div className='item'>SOCIAL MEDIA LINKS</div>
         </div>
     );
 }
