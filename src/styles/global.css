@@ -66,12 +66,12 @@ body {
 }
 
 @media only screen and (min-width: 901px) {
-    /* .hideburger {
+    .hideburger {
         display: none;
-    } */
-    .hidebar {
-        display: flex;
     }
+    /* .hidebar {
+        display: flex;
+    } */
 }
 
 p {
@@ -135,4 +135,8 @@ p {
     left: 0;
     position: absolute;
     top: 0;
+}
+
+.li {
+    text-decoration: none;
 }

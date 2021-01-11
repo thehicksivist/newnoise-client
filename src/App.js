@@ -25,10 +25,10 @@ const App = () => {
                 <div>
                     <Header />
                 </div>
-                <div ref={node} className='hideburger'>
+                <div ref={node}>
                     <Burger open={open} setOpen={setOpen} />
-                    <Menu open={open} setOpen={setOpen} />
                 </div>
+                <Menu open={open} setOpen={setOpen} />
                 <div className='hidebar'>
                     <Navbar />
                 </div>

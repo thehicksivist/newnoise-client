@@ -5,33 +5,21 @@ import { NavLink } from 'react-router-dom';
 const Menu = ({ open, setOpen }) => {
     return (
         <StyledMenu open={open}>
-            <ul>
-                <li>
-                    <NavLink to='/' onClick={() => setOpen(!open)}>
-                        HOME
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/about' onClick={() => setOpen(!open)}>
-                        ABOUT
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/music' onClick={() => setOpen(!open)}>
-                        MUSIC
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/miniatures' onClick={() => setOpen(!open)}>
-                        MINIATURES
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to='/contact' onClick={() => setOpen(!open)}>
-                        CONTACT
-                    </NavLink>
-                </li>
-            </ul>
+            <NavLink to='/' onClick={() => setOpen(!open)}>
+                HOME
+            </NavLink>
+            <NavLink to='/about' onClick={() => setOpen(!open)}>
+                ABOUT
+            </NavLink>
+            <NavLink to='/music' onClick={() => setOpen(!open)}>
+                MUSIC
+            </NavLink>
+            <NavLink to='/miniatures' onClick={() => setOpen(!open)}>
+                MINIATURES
+            </NavLink>
+            <NavLink to='/contact' onClick={() => setOpen(!open)}>
+                CONTACT
+            </NavLink>
         </StyledMenu>
     );
 };

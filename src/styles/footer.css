@@ -30,6 +30,9 @@
     -webkit-align-self: auto;
     -ms-flex-item-align: auto;
     align-self: auto;
+}
+
+.links {
     padding-bottom: 30px;
 }
 
