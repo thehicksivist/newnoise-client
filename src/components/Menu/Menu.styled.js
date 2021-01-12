@@ -3,12 +3,6 @@ import styled from 'styled-components';
 export const StyledMenu = styled.ul`
     display: flex;
 
-    li,
-    a {
-        color: black;
-        text-decoration: none;
-    }
-
     @media (max-width: 900px) {
         flex-direction: column;
         justify-content: center;
@@ -26,14 +20,14 @@ export const StyledMenu = styled.ul`
         transform: ${({ open }) =>
             open ? 'translateX(0)' : 'translateX(-100%)'};
 
-        li {
+        a {
             font-size: 2rem;
             text-transform: uppercase;
             padding: 2rem 0;
             font-weight: bold;
             letter-spacing: 0.5rem;
             color: black;
-            transition: color 0.3s linear;
+            text-decoration: none;
 
             &:hover {
                 color: ${({ theme }) => theme.primaryHover};
@@ -52,13 +46,14 @@ export const StyledMenu = styled.ul`
         padding: 10px 10px;
         transition: transform 0.5s;
 
-        li {
+        a {
             font-size: 1.5em;
             text-transform: uppercase;
             padding: 2rem 0;
             font-weight: bold;
             letter-spacing: 0.5rem;
             color: black;
+            text-decoration: none;
 
             &:active {
                 transform: scale(1.5);
