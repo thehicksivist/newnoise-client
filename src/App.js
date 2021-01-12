@@ -29,9 +29,9 @@ const App = () => {
                     <Burger open={open} setOpen={setOpen} />
                 </div>
                 <Menu open={open} setOpen={setOpen} />
-                <div className='hidebar'>
+                {/* <div className='hidebar'>
                     <Navbar />
-                </div>
+                </div> */}
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/music' component={Music} />

@@ -3,6 +3,12 @@ import styled from 'styled-components';
 export const StyledMenu = styled.ul`
     display: flex;
 
+    li,
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
     @media (max-width: 900px) {
         flex-direction: column;
         justify-content: center;
@@ -19,35 +25,45 @@ export const StyledMenu = styled.ul`
         transition: transform 0.3s ease-in-out;
         transform: ${({ open }) =>
             open ? 'translateX(0)' : 'translateX(-100%)'};
+
+        li {
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: bold;
+            letter-spacing: 0.5rem;
+            color: black;
+            transition: color 0.3s linear;
+
+            &:hover {
+                color: ${({ theme }) => theme.primaryHover};
+            }
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 900px) {
+        width: 50%;
     }
 
     @media (min-width: 901px) {
-        width: 100%;
         flex-direction: row;
         justify-content: space-around;
         align-self: center;
         padding: 10px 10px;
-        transform: none;
-    }
-    )
+        transition: transform 0.5s;
 
-    NavLink {
-        font-size: 2rem;
-        text-transform: uppercase;
-        padding: 2rem 0;
-        font-weight: bold;
-        letter-spacing: 0.5rem;
-        color: ${({ theme }) => theme.primaryDark};
-        text-decoration: none;
-        transition: color 0.3s linear;
+        li {
+            font-size: 1.5em;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: bold;
+            letter-spacing: 0.5rem;
+            color: black;
 
-        @media (max-width: ${({ theme }) => theme.mobile}) {
-            font-size: 1.5rem;
-            text-align: center;
-        }
-
-        &:hover {
-            color: ${({ theme }) => theme.primaryHover};
+            &:active {
+                transform: scale(1.5);
+                transition: transform 0.2s ease-out;
+            }
         }
     }
 `;

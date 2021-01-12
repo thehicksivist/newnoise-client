@@ -15,6 +15,10 @@ export const StyledBurger = styled.button`
     padding: 0 0 0 10px;
     z-index: 10;
 
+    @media (min-width: 901px) {
+        display: none;
+    }
+
     &:focus {
         outline: none;
     }
