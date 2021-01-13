@@ -10,6 +10,7 @@
     "react-image-gallery": "^1.0.8",
     "react-router-dom": "^5.2.0",
     "react-scripts": "2.1.8",
+    "react-social-icons": "^4.1.0",
     "styled-components": "^5.2.1"
   },
   "scripts": {

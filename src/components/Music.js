@@ -1,5 +1,5 @@
 import React from 'react';
-import FadeInSection from './FadeInSection';
+import FadeInSection from './BitsNbobs/FadeInSection';
 import Line from '../components/BitsNbobs/Line';
 
 const Music = () => {
@@ -61,6 +61,7 @@ const Music = () => {
                     />
                 </div>
             </FadeInSection>
+            <Line />
         </div>
     );
 };

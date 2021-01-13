@@ -6,7 +6,6 @@ import Music from './components/Music';
 import Miniatures from './components/Miniatures';
 import Contact from './components/Contact';
 import Header from './components/Header';
-import Navbar from './components/Menu/Navbar';
 import Burger from './components/Menu/Burger';
 import Menu from './components/Menu/Menu';
 import Footer from './components/Footer';
@@ -22,16 +21,11 @@ const App = () => {
     return (
         <Router>
             <div className='App'>
-                <div>
-                    <Header />
-                </div>
+                <Header />
                 <div ref={node}>
                     <Burger open={open} setOpen={setOpen} />
                 </div>
                 <Menu open={open} setOpen={setOpen} />
-                {/* <div className='hidebar'>
-                    <Navbar />
-                </div> */}
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/music' component={Music} />
