@@ -31,7 +31,7 @@ const App = () => {
                 <Route exact path='/music' component={Music} />
                 <Route exact path='/miniatures' component={Miniatures} />
                 <Route exact path='/contact' component={Contact} />
-                <Footer />
+                <Footer key={window.location.pathname} />
             </div>
         </Router>
     );
