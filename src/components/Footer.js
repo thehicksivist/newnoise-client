@@ -58,8 +58,18 @@ const Footer = () => {
                 />
             </div>
             <p className='subtitle center-text'>
-                This website and all its content created under the Undoing
+                This website and all its content* created under the Undoing
                 Perfectionism <small>TM</small> by James Hicks - 2021
+            </p>
+            <p>
+                * header photo by{' '}
+                <a
+                    href='https://ktb.media/'
+                    target='_blank'
+                    rel='nofollow noopener'
+                >
+                    KTB MEDIA
+                </a>
             </p>
         </div>
     );
