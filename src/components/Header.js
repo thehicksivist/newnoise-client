@@ -7,7 +7,7 @@ class Header extends Component {
         return (
             <div className='imgcont'>
                 <div className='shadow'></div>
-                <img className='face fade-in' src={headerimg} />
+                <img className='face fade-in' src={headerimg} alt='face' />
                 <div className='text'>
                     <div className='title'>
                         <p className='titletext'> undoing perfectionism</p>

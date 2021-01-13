@@ -1,6 +1,6 @@
 import React from 'react';
 import FadeInSection from './BitsNbobs/FadeInSection';
-import Line from '../components/BitsNbobs/Line';
+import Line from './BitsNbobs/Line';
 
 const Music = () => {
     return (

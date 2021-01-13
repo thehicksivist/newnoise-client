@@ -9,7 +9,7 @@ export const StyledMenu = styled.ul`
         width: 100%;
         height: 100%;
         background: white;
-        opacity: 0.85;
+        opacity: 0.9;
         text-align: left;
         padding: 2rem;
         position: absolute;

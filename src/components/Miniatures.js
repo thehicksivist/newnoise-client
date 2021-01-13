@@ -1,6 +1,6 @@
 import React from 'react';
 import FadeInSection from './BitsNbobs/FadeInSection';
-import Line from '../components/BitsNbobs/Line';
+import Line from './BitsNbobs/Line';
 import Gallery from './Gallery';
 
 const Miniatures = () => {
@@ -59,6 +59,7 @@ const Miniatures = () => {
             <Line />
             <FadeInSection>
                 <h2>GALLERY</h2>
+                <br />
                 <Gallery />
             </FadeInSection>
             <Line />

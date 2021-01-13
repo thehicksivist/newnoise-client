@@ -11,6 +11,7 @@ import Menu from './components/Menu/Menu';
 import Footer from './components/Footer';
 import { useOnClickOutside } from './hooks';
 import './styles/global.css';
+import ScrollToTop from './components/BitsNbobs/ScollToTop';
 
 const App = () => {
     const [open, setOpen] = useState(false);
@@ -20,6 +21,7 @@ const App = () => {
 
     return (
         <Router>
+            <ScrollToTop />
             <div className='App'>
                 <Header />
                 <div ref={node}>
@@ -32,6 +34,14 @@ const App = () => {
                 <Route exact path='/miniatures' component={Miniatures} />
                 <Route exact path='/contact' component={Contact} />
                 <Footer key={window.location.pathname} />
+                <p className='arrowcont'>
+                    <i
+                        class='arrow'
+                        onClick={() =>
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }
+                    ></i>
+                </p>
             </div>
         </Router>
     );

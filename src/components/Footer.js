@@ -20,6 +20,7 @@ const Footer = () => {
     return (
         <div className='footer-container'>
             <img src={Greenwave} className='greenstuff' />
+
             <FadeInSection>
                 <div className='quote-container center-text'>
                     <p className='quote'>"{quotes[random]}"</p>
