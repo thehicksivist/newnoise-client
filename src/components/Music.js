@@ -5,7 +5,9 @@ import Line from '../components/BitsNbobs/Line';
 const Music = () => {
     return (
         <div className='container'>
-            <FadeInSection>MUSIC PAGE</FadeInSection>
+            <FadeInSection>
+                <h2>MUSIC</h2>
+            </FadeInSection>
             <Line />
             <FadeInSection>
                 <p>
@@ -24,7 +26,6 @@ const Music = () => {
                 </p>
             </FadeInSection>
             <Line />
-
             <FadeInSection>
                 <div className='iframe-container'>
                     <iframe
@@ -32,12 +33,11 @@ const Music = () => {
                         height='300'
                         scrolling='no'
                         frameborder='no'
-                        src='https://www.youtube.com/embed/JMMcnkA0jms?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0'
+                        src='https://www.youtube.com/embed/RNO2zs3XOGA?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0'
                     />
                 </div>
             </FadeInSection>
             <Line />
-
             <FadeInSection>
                 <div className='iframe-container'>
                     <iframe
@@ -57,7 +57,7 @@ const Music = () => {
                         height='300'
                         scrolling='no'
                         frameborder='no'
-                        src='https://www.youtube.com/embed/RNO2zs3XOGA?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0'
+                        src='https://www.youtube.com/embed/JMMcnkA0jms?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0'
                     />
                 </div>
             </FadeInSection>
