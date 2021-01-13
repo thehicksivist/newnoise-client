@@ -15,9 +15,23 @@ import ScrollToTop from './components/BitsNbobs/ScollToTop';
 
 const App = () => {
     const [open, setOpen] = useState(false);
+    const [showArrow, setShowArrow] = useState(false);
 
     const node = useRef();
     useOnClickOutside(node, () => setOpen(false));
+
+    window.onscroll = function () {
+        console.log('offset:', window.scrollY);
+
+        if (window.pageYOffset > 400 && showArrow !== true) {
+            console.log(true);
+            setShowArrow(true);
+        }
+        if (window.pageYOffset < 400 && showArrow !== false) {
+            console.log(false);
+            setShowArrow(false);
+        }
+    };
 
     return (
         <Router>
@@ -34,14 +48,16 @@ const App = () => {
                 <Route exact path='/miniatures' component={Miniatures} />
                 <Route exact path='/contact' component={Contact} />
                 <Footer key={window.location.pathname} />
-                <p className='arrowcont'>
-                    <i
-                        class='arrow'
-                        onClick={() =>
-                            window.scrollTo({ top: 0, behavior: 'smooth' })
-                        }
-                    ></i>
-                </p>
+                {showArrow === true && (
+                    <p className='arrowcont'>
+                        <i
+                            className='arrow'
+                            onClick={() =>
+                                window.scrollTo({ top: 0, behavior: 'smooth' })
+                            }
+                        ></i>
+                    </p>
+                )}
             </div>
         </Router>
     );
