@@ -24,6 +24,7 @@ const Miniatures = () => {
                     <a
                         href='https://en.wikipedia.org/wiki/Warhammer_40,000'
                         target='_blank'
+                        rel='noopener noreferrer'
                     >
                         Warhammer 40k
                     </a>{' '}
@@ -39,6 +40,7 @@ const Miniatures = () => {
                     <a
                         href='https://en.wikipedia.org/wiki/Mordheim'
                         target='_blank'
+                        rel='noopener noreferrer'
                     >
                         Mordheim
                     </a>

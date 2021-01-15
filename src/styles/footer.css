@@ -26,7 +26,7 @@
 }
 
 .greenstuff {
-    position: fixed;
+    position: absolute;
     opacity: 10%;
     width: 100%;
     object-fit: fill;

@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import img1 from '../img/Miniatures/img1.jpg';
-import img2 from '../img/Miniatures/img2.jpg';
-import img3 from '../img/Miniatures/img3.jpg';
-import img4 from '../img/Miniatures/img4.jpg';
-import img5 from '../img/Miniatures/img5.jpg';
-import img6 from '../img/Miniatures/img6.jpg';
-import img7 from '../img/Miniatures/img7.jpg';
-import img8 from '../img/Miniatures/img8.jpg';
 
 const Gallery = () => {
     const [thisState, setThisState] = useState({
@@ -29,8 +21,8 @@ const Gallery = () => {
         showVideo: {},
     });
 
-    const PREFIX_URL =
-        'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
+    // const PREFIX_URL =
+    //     'https://raw.githubusercontent.com/xiaolin/react-image-gallery/master/static/';
 
     const _onImageClick = (event) => {
         console.debug(
@@ -62,29 +54,29 @@ const Gallery = () => {
         console.debug('playing from index', index);
     };
 
-    const _handleInputChange = (state, event) => {
-        setThisState({ [state]: event.target.value });
-    };
+    // const _handleInputChange = (state, event) => {
+    //     setThisState({ [state]: event.target.value });
+    // };
 
-    const _handleCheckboxChange = (state, event) => {
-        setThisState({ [state]: event.target.checked });
-    };
+    // const _handleCheckboxChange = (state, event) => {
+    //     setThisState({ [state]: event.target.checked });
+    // };
 
-    const _handleThumbnailPositionChange = (event) => {
-        setThisState({ thumbnailPosition: event.target.value });
-    };
+    // const _handleThumbnailPositionChange = (event) => {
+    //     setThisState({ thumbnailPosition: event.target.value });
+    // };
 
-    const _getStaticImages = () => {
-        let images = [];
-        for (let i = 2; i < 12; i++) {
-            images.push({
-                original: `${PREFIX_URL}${i}.jpg`,
-                thumbnail: `${PREFIX_URL}${i}t.jpg`,
-            });
-        }
+    // const _getStaticImages = () => {
+    //     let images = [];
+    //     for (let i = 2; i < 12; i++) {
+    //         images.push({
+    //             original: `${PREFIX_URL}${i}.jpg`,
+    //             thumbnail: `${PREFIX_URL}${i}t.jpg`,
+    //         });
+    //     }
 
-        return images;
-    };
+    //     return images;
+    // };
 
     const _resetVideo = () => {
         setThisState({ showVideo: {} });
@@ -98,92 +90,109 @@ const Gallery = () => {
         }
     };
 
-    const _toggleShowVideo = (url) => {
-        thisState.showVideo[url] = !Boolean(thisState.showVideo[url]);
-        setThisState({
-            showVideo: thisState.showVideo,
-        });
+    // const _toggleShowVideo = (url) => {
+    //     thisState.showVideo[url] = !Boolean(thisState.showVideo[url]);
+    //     setThisState({
+    //         showVideo: thisState.showVideo,
+    //     });
 
-        if (thisState.showVideo[url]) {
-            if (thisState.showPlayButton) {
-                setThisState({ showGalleryPlayButton: false });
-            }
+    //     if (thisState.showVideo[url]) {
+    //         if (thisState.showPlayButton) {
+    //             setThisState({ showGalleryPlayButton: false });
+    //         }
 
-            if (thisState.showFullscreenButton) {
-                setThisState({ showGalleryFullscreenButton: false });
-            }
-        }
-    };
+    //         if (thisState.showFullscreenButton) {
+    //             setThisState({ showGalleryFullscreenButton: false });
+    //         }
+    //     }
+    // };
 
-    const _renderVideo = (item) => {
-        return (
-            <div>
-                {thisState.showVideo[item.embedUrl] ? (
-                    <div className='video-wrapper'>
-                        <a
-                            className='close-video'
-                            onClick={_toggleShowVideo.bind(this, item.embedUrl)}
-                        ></a>
-                        <iframe
-                            width='560'
-                            height='315'
-                            src={item.embedUrl}
-                            frameBorder='0'
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                ) : (
-                    <a onClick={_toggleShowVideo.bind(this, item.embedUrl)}>
-                        <div className='play-button'></div>
-                        <img
-                            className='image-gallery-image'
-                            src={item.original}
-                        />
-                        {item.description && (
-                            <span
-                                className='image-gallery-description'
-                                style={{ right: '0', left: 'initial' }}
-                            >
-                                {item.description}
-                            </span>
-                        )}
-                    </a>
-                )}
-            </div>
-        );
-    };
+    // const _renderVideo = (item) => {
+    //     return (
+    //         <div>
+    //             {thisState.showVideo[item.embedUrl] ? (
+    //                 <div className='video-wrapper'>
+    //                     <a
+    //                         className='close-video'
+    //                         onClick={_toggleShowVideo.bind(this, item.embedUrl)}
+    //                     ></a>
+    //                     <iframe
+    //                         width='560'
+    //                         height='315'
+    //                         src={item.embedUrl}
+    //                         frameBorder='0'
+    //                         allowFullScreen
+    //                     ></iframe>
+    //                 </div>
+    //             ) : (
+    //                 <a onClick={_toggleShowVideo.bind(this, item.embedUrl)}>
+    //                     <div className='play-button'></div>
+    //                     <img
+    //                         className='image-gallery-image'
+    //                         src={item.original}
+    //                     />
+    //                     {item.description && (
+    //                         <span
+    //                             className='image-gallery-description'
+    //                             style={{ right: '0', left: 'initial' }}
+    //                         >
+    //                             {item.description}
+    //                         </span>
+    //                     )}
+    //                 </a>
+    //             )}
+    //         </div>
+    //     );
+    // };
+
     const images = [
         {
-            original: img1,
-            thumbnail: img1,
+            original:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685915/PXL_20201012_095247773.jpg',
+            thumbnail:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685915/PXL_20201012_095247773.jpg',
         },
         {
-            original: img2,
-            thumbnail: img2,
+            original:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685917/PXL_20201230_084908247.jpg',
+            thumbnail:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685917/PXL_20201230_084908247.jpg',
         },
         {
-            original: img3,
-            thumbnail: img3,
+            original:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685919/PXL_20201213_002229568.jpg',
+            thumbnail:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685919/PXL_20201213_002229568.jpg',
         },
         {
-            original: img4,
-            thumbnail: img4,
+            original:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685916/PXL_20201213_014336049.jpg',
+            thumbnail:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685916/PXL_20201213_014336049.jpg',
         },
         {
-            original: img5,
-            thumbnail: img5,
+            original:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685924/resize3.jpg',
+            thumbnail:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685924/resize3.jpg',
         },
         {
-            original: img6,
-            thumbnail: img6,
+            original:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685924/resize2.jpg',
+            thumbnail:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685924/resize2.jpg',
         },
         {
-            original: img7,
-            thumbnail: img7,
+            original:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685981/resize4.jpg',
+            thumbnail:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685981/resize4.jpg',
         },
         {
-            original: img8,
-            thumbnail: img8,
+            original:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685916/PXL_20201215_045905856.jpg',
+            thumbnail:
+                'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610685916/PXL_20201215_045905856.jpg',
         },
     ];
 

@@ -12,7 +12,7 @@ const Music = () => {
             <FadeInSection>
                 <p>
                     I started playing in metal bands as soon as I could play my
-                    first songs on Guitar, around 2005. I played locally in
+                    first songs on guitar, around 2005. I played locally in
                     Brisbane until around 2011 when my band at the time The
                     Archivist began to tour outside of South-East QLD, heading
                     to Melbourne, Sydney and Tasmania over the next four years.
@@ -22,11 +22,12 @@ const Music = () => {
                     one which is released as a Demo on Soundcloud. Since then I
                     have been challenging myself to do guitar covers for all my
                     favourtie albums over the years, which I have been posting
-                    to youtube.
+                    to YouTube.
                 </p>
             </FadeInSection>
             <Line />
             <FadeInSection>
+                <p>Latest guitar cover:</p>
                 <div className='iframe-container'>
                     <iframe
                         width='100%'
@@ -39,6 +40,7 @@ const Music = () => {
             </FadeInSection>
             <Line />
             <FadeInSection>
+                <p>Self-recorded demo:</p>
                 <div className='iframe-container'>
                     <iframe
                         width='100%'
@@ -51,6 +53,7 @@ const Music = () => {
             </FadeInSection>
             <Line />
             <FadeInSection>
+                <p>Band (inactive) film-clip:</p>
                 <div className='iframe-container'>
                     <iframe
                         width='100%'
