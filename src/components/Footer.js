@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
             </FadeInSection>
             <div className='title'>
-                <p className='titletext'> undoing perfectionism </p>
+                <p className='titletext'> undoing perfectionism &nbsp;</p>
             </div>
             <div className='icons'>
                 <SocialIcon

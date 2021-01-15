@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import headerimg from '../img/header.jpg';
 import '../styles/header.css';
 
 class Header extends Component {
@@ -7,10 +6,17 @@ class Header extends Component {
         return (
             <div className='imgcont'>
                 <div className='shadow'></div>
-                <img className='face fade-in' src={headerimg} alt='face' />
+                <img
+                    className='face fade-in'
+                    src='https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610691528/header.jpg'
+                    alt='face'
+                />
                 <div className='text'>
                     <div className='title'>
-                        <p className='titletext'> undoing perfectionism</p>
+                        <p className='titletext'>
+                            {' '}
+                            undoing perfectionism &nbsp;
+                        </p>
                     </div>
                     <p className='subtitle'>by James Hicks</p>
                 </div>
