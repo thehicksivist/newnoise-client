@@ -27,6 +27,7 @@ function Home() {
                     scrolling='no'
                     frameborder='no'
                     src='https://anchor.fm/james-hicks0/embed'
+                    title='podcast'
                 />
             </FadeInSection>
             <Line />
@@ -35,9 +36,10 @@ function Home() {
             </div>
             <div id='curator-feed-default-feed-layout' className='item'>
                 <a
+                    className='crt-logo crt-tag'
                     href='https://curator.io'
                     target='_blank'
-                    className='crt-logo crt-tag'
+                    rel='noopener noreferrer'
                 >
                     Powered by Curator.io
                 </a>

@@ -19,9 +19,6 @@ const Footer = () => {
         "If you don't like a colour, use it because it just means you don't understand it yet.",
     ];
 
-    const greenwave =
-        'https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610687616/Pngtree_modern_stylish_green_wave_background_5068018.png';
-
     const random = Math.floor(Math.random() * quotes.length);
 
     return (
@@ -29,6 +26,7 @@ const Footer = () => {
             <img
                 src='https://res.cloudinary.com/dvqlfwgtf/image/upload/v1610687616/Pngtree_modern_stylish_green_wave_background_5068018.png'
                 className='greenstuff'
+                alt='greenwave'
             />
 
             <FadeInSection>
@@ -83,7 +81,6 @@ const Footer = () => {
                     href='https://ktb.media/'
                     target='_blank'
                     rel='noopener noreferrer'
-                    rel='nofollow noopener'
                 >
                     KTB MEDIA
                 </a>

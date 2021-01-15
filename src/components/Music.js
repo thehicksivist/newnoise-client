@@ -35,6 +35,7 @@ const Music = () => {
                         scrolling='no'
                         frameborder='no'
                         src='https://www.youtube.com/embed/RNO2zs3XOGA?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0'
+                        title='latestcover'
                     />
                 </div>
             </FadeInSection>
@@ -48,6 +49,7 @@ const Music = () => {
                         scrolling='no'
                         frameborder='no'
                         src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/572878518&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
+                        title='demo'
                     />
                 </div>
             </FadeInSection>
@@ -61,6 +63,7 @@ const Music = () => {
                         scrolling='no'
                         frameborder='no'
                         src='https://www.youtube.com/embed/JMMcnkA0jms?autoplay=0&fs=1&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0'
+                        title='filmclip'
                     />
                 </div>
             </FadeInSection>

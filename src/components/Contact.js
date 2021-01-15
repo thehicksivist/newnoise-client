@@ -31,7 +31,7 @@ const Contact = () => {
                             class='example_c'
                             href='mailto:hicks.a.james@gmail.com'
                             target='_blank'
-                            rel='nofollow noopener'
+                            rel='noopener noreferrer nofollow'
                         >
                             Email me!
                         </a>
