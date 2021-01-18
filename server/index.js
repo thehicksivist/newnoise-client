@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
+const helmet = require('helmet');
 
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
@@ -22,6 +23,25 @@ if (!isDev && cluster.isMaster) {
     });
 } else {
     const app = express();
+
+    // Return securityt headers
+    app.use(helmet());
+
+    // Sets all of the defaults, but overrides script-src
+    app.use(
+        helmet.contentSecurityPolicy({
+            directives: {
+                ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+                'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
+                'img-src': ['*'],
+                'frame-src': ['*', "'unsafe-inline'"],
+                'connect-src': ['*', "'unsafe-inline'"],
+                'script-src-elem': ['*', "'unsafe-inline'"],
+            },
+        })
+    );
+
+    // Header set Content-Security-Policy "allow 'self'; media-src *; img-src *; script-src 'self' 'unsafe-inline' https://ajax.googleapis.com www.google-analytics.com; style-src 'self' 'unsafe-inline';"
 
     // Priority serve any static files.
     app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
